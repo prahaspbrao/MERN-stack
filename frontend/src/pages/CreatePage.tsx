@@ -11,7 +11,7 @@ function CreatePage() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
 
     if (!title.trim() || !content.trim()) {
@@ -33,11 +33,12 @@ function CreatePage() {
     }
   };
 
+  // bg-base-200
   return (
-    <div className='min-h-screen bg-base-200 flex items-center justify-center px-4'>
+    <div className='min-h-screen bg-transparent  flex items-center justify-center px-4'>
       <div className='w-full max-w-2xl'>
-        <Link to="/" className='btn btn-ghost mb-6 flex items-center gap-2'>
-          <ArrowLeftIcon className='size-5' />
+        <Link to="/" className='btn btn-ghost mb-6 flex items-center gap-2 text-lg font-bold'>
+          <ArrowLeftIcon className='size-6' />
           Back to Notes
         </Link>
 
